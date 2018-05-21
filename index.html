@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>STR-KILLER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-logo">str-killer</h1>
+        <img class="header-molodist-logo" src="img/logo.png" alt="molodist">
+    </header>
+    <section class="main">
+        <div class="main-column">
+            <div class="main-column-header">
+                <label class="label" for="input">Input:</label>
+            </div>
+            <textarea class="textarea" id="input" placeholder="Paste text"></textarea>
+        </div>
+        <div class="main-column">
+            <div class="main-column-header">
+                <label class="label" for="output">Output:</label>
+            </div>
+            <textarea class="textarea" id="output" readonly></textarea>
+        </div>
+    </section>
+    <footer class="footer">
+        <button id="process" class="footer-button">Process</button>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+/* Header */
+.header{
+    position: relative;
+    height: 50px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+    .header-logo{
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .header-molodist-logo{
+        display: block;
+        height: 35px;
+
+    }
+
+/* Main */
+.main{
+    position: relative;
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+    .main-column{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+        .main-column:not(:first-child){
+            border-left: 1px solid #eee;
+        }
+        .main-column-header{
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+    .label{
+        display: block;
+        width: 100%;
+    }
+    .textarea{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        border: 0;
+        resize: none;
+        font-size: 14px;
+        color: #666;
+        outline: none;
+    }
+
+/* Footer */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-top: 1px solid #eee;
+}
+    .footer-button{
+        border: 0;
+        background: #eeeeee;
+        padding: 5px 15px;
+        cursor: pointer;
+        outline: none;
+    }
