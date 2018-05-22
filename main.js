@@ -1,8 +1,9 @@
 function Convert(input) {
-	var findTimecode 			= new RegExp("([0-9]{1,}[\n|\r\n|\r]{1,}[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}[,.:][0-9]{1,3} {0,}--> {0,}[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}[,.:][0-9]{1,3}[\n|\r\n|\r]{1,})", "gm");
-	var findLineBreaks 			= new RegExp("[\n|\r\n|\r]{1,}", "gm");
+	var findTimecode            = new RegExp("([0-9]{1,}[\n|\r\n|\r]{1,}[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}[,.:][0-9]{1,3} {0,}--> {0,}[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}[,.:][0-9]{1,3}[\n|\r\n|\r]{1,})", "gm");
+	var findLineBreaks          = new RegExp("[\n|\r\n|\r]{1,}", "gm");
 	var findTrailingWhitespaces = new RegExp("^[ \t]+|[ \t]+$", "gm");
 	var findReachTextFormatting = new RegExp("(\<[^\>]*\>)", "gm");
+	var findDoubleWhitespaces   = new RegExp("  ", "gm");
 	
 	var subtitles = input.split(findTimecode);
 	var validSubtitles = [];
@@ -18,6 +19,7 @@ function Convert(input) {
 			
 			lines.forEach(function(l) {
 				var line = l.replace(findTrailingWhitespaces, "");
+				line = line.replace(findDoubleWhitespaces, " ");
 				
 				if (line != "")
 				{
